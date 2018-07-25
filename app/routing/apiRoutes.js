@@ -1,5 +1,7 @@
 
+
 var friends = require('../data/friends.js');
+
 
 
 
@@ -15,7 +17,7 @@ module.exports = function (app) {
 
     });
 
-    //logic compatibility handling
+    // logic compatibility handling
 
 
     app.post('/api/friends', function (req, res) {
@@ -42,10 +44,10 @@ module.exports = function (app) {
 
 
             // we loop through the scores of every friend
-            for (var j = 0; j < friends[i].scores[j]; J++) {
+            for (var j = 0; j < friends[i].scores[j]; j++) {
 
                 // math abs turn any negative value to positive, and in positive in stays the
-                totalDifference += math.abs(parseInt(userScores[j]) - parseInt(friends[i].scores[j]));
+                totalDifference += Math.abs(parseInt(userScores[j]) - parseInt(friends[i].scores[j]));
 
 
                 if (totalDifference <= bestMatch.friendDifference) {
@@ -58,10 +60,11 @@ module.exports = function (app) {
                 }
 
             }
+           
         }
 
+       
         friends.push(userData);
-
 
         // return json with the user's best match . This will be used by the HTML in the next page
 
@@ -71,3 +74,4 @@ module.exports = function (app) {
 
     });
 }
+

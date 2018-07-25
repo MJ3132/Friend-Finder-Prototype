@@ -195,14 +195,16 @@
 
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/js/bootstrap.min.js"></script>
 </body>
 
 <script>
+
     $('#submit').on('click', function (event) {
 
+        event.preventDefault();
 
 
         function validateForm() {
@@ -218,8 +220,12 @@
                     isValid = false;
                 }
             });
+            console.log(isValid);
             return isValid;
+            
         } 
+
+   
     if(validateForm){
         var userData = {
             name: $('#name').val().trim(),
@@ -247,7 +253,7 @@
         var currentURL = window.location.origin;
 
 
-        $.post(currentURL + '/api/friends',userData, function (data) {
+        $.post(currentURL +'/api/friends',userData, function (data) {
                 console.log(data);
 
                 $("#matchName").text(data.name);
@@ -255,7 +261,7 @@
 
                 //show modal
 
-                $('.modal').modal();
+                $('.modal').modal('toggle');
 
 
 
