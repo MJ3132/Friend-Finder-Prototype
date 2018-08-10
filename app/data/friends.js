@@ -4,7 +4,7 @@ var friends = [
     
     {
       "name":"Ahmed",
-      "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+      "photo":"http://profilepicturesdp.com/wp-content/uploads/2018/07/photos-for-profile-picture-1.jpg",
       "scores":[
           "5",
           "1",
@@ -21,7 +21,7 @@ var friends = [
 
     {
         "name":"Mary",
-        "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        "photo":"http://www.bistiproofpage.com/wp-content/uploads/2018/04/cute-profile-pics-for-whatsapp-images.png",
         "scores":[
             "3",
             "1",
@@ -39,7 +39,7 @@ var friends = [
 
       {
         "name":"liss",
-        "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        "photo":"http://beragaminfo.com/wp-content/uploads/2017/09/These-Are-the-Photos-Your-Dating-Profile-Absolutely-Must-Have-According-to-Matchmakers.jpg",
         "scores":[
             "1",
             "1",

@@ -14,10 +14,30 @@
 
 
 <style>
+
+body {
+    background : url(http://www.travelforu.info/wp-content/uploads/2018/05/Adventurous-Places-To-Go-With-Your-Best-Friends-In-North-India.jpg)no-repeat center center white;
+    background-size: cover;
+}
+    h1 {
+        font-size: 70px;
+        margin: 2% auto;
+        text-align: center;
+    }
+
+    img {
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+    }
     form {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        margin: 10%;
+        color: orange;
+        background: black;
+        opacity:0.9;
 
     }
 
@@ -36,12 +56,18 @@
         height: 50px;
         padding: 10px;
         margin: 5px;
+        margin: 0 auto;
 
+    }
+
+    #modal-pic{
+        height: 250px;
+        width: 60%;
     }
 </style>
 
 <body>
-
+    <h1>Friend Finder</h1>
     <form>
         <!-- User Information -->
         <label for="name">Name</label>
@@ -160,7 +186,7 @@
             <option value="4">4</option>
             <option value="5">5 (strongly agree)</option>
         </select>
-        <button id="submit" value="submit">Submit</button>
+        <button type="button" class="btn btn-lg btn-primary" id="submit">Submit</button>
     </form>
 
 
@@ -178,7 +204,9 @@
                     <p>Best Match</p>
                     <div id="resultsModal">
                         <h2 id="matchName"></h2>
-                        <img id="matchImg" src="" alt="">
+                    <figure id="modal-pic">
+                        <img id="matchImg" src="" alt="match-image">
+                    </figure>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -255,6 +283,8 @@
 
         $.post(currentURL +'/api/friends',userData, function (data) {
                 console.log(data);
+                
+
 
                 $("#matchName").text(data.name);
                 $("#matchImg").attr("src", data.photo)
@@ -262,6 +292,8 @@
                 //show modal
 
                 $('.modal').modal('toggle');
+
+                
 
 
 
